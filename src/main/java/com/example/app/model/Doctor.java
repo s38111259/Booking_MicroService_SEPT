@@ -13,7 +13,7 @@ public class Doctor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	@Column(name = "DoctorID")
-	private Long DoctorID;
+	private int DoctorID;
 	
 	@Column(name = "Name")
 	private String DoctorName;
@@ -37,11 +37,11 @@ public class Doctor {
 		
 	}
 	
-	public Long getDoctorID() {
+	public int getDoctorID() {
 		return DoctorID;
 	}
 
-	public void setDoctorID(Long doctorID) {
+	public void setDoctorID(int doctorID) {
 		DoctorID = doctorID;
 	}
 

@@ -31,9 +31,9 @@ public class DoctorResource {
 //		return 
 //	}
 	
-	@PostMapping(value = "/loadDoctor")
-	public List<Doctor> load(@RequestBody final Doctor doctor){
-		doctorRepo.save(doctor);
-		return doctorRepo.findAll();
-	}
+//	@PostMapping(value = "/loadDoctor")
+//	public List<Doctor> load(@RequestBody final Doctor doctor){
+//		doctorRepo.save(doctor);
+//		return doctorRepo.findAll();
+//	}
 }

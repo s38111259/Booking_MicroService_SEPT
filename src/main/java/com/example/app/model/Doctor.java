@@ -7,16 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Patient {
+public class Doctor {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name = "PatientID")
-	private int PatientID;
+	@Column(name = "DoctorID")
+	private Long DoctorID;
 	
 	@Column(name = "Name")
-	private String PatientName;
+	private String DoctorName;
 	
 	@Column(name = "Phone")
 	private int PhoneNo;
@@ -24,33 +24,33 @@ public class Patient {
 	@Column(name = "Address")
 	private String Address;
 	
-	@Column(name = "Age")
-	private int Age;
-	
 	@Column(name = "Sex")
 	private String Sex;
 	
 	@Column(name = "Email")
 	private String Email;
 	
-	public Patient() {
+	@Column(name = "Specialization")
+	private String Specialization;
+	
+	public Doctor() {
 		
 	}
-
-	public int getPatientID() {
-		return PatientID;
+	
+	public Long getDoctorID() {
+		return DoctorID;
 	}
 
-	public void setPatientID(int patientID) {
-		PatientID = patientID;
+	public void setDoctorID(Long doctorID) {
+		DoctorID = doctorID;
 	}
 
-	public String getPatientName() {
-		return PatientName;
+	public String getDoctorName() {
+		return DoctorName;
 	}
 
-	public void setPatientName(String patientName) {
-		PatientName = patientName;
+	public void setDoctorName(String doctorName) {
+		DoctorName = doctorName;
 	}
 
 	public int getPhoneNo() {
@@ -69,12 +69,12 @@ public class Patient {
 		Address = address;
 	}
 
-	public int getAge() {
-		return Age;
+	public String getSpecialization() {
+		return Specialization;
 	}
 
-	public void setAge(int age) {
-		Age = age;
+	public void setSpecialization(String specialization) {
+		Specialization = specialization;
 	}
 
 	public String getSex() {
@@ -92,5 +92,6 @@ public class Patient {
 	public void setEmail(String email) {
 		Email = email;
 	}
+
 	
 }

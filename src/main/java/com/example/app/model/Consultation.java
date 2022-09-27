@@ -8,6 +8,17 @@ import javax.persistence.Id;
 
 @Entity
 public class Consultation {
+	
+	public Consultation() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Consultation(int BookingID, String PatName, String DocName, String Reason){
+		this.BookingID = BookingID;
+		this.PatName = PatName;
+		this.DocName = DocName;
+		this.reason = Reason;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +31,11 @@ public class Consultation {
 	
 	@Column(name = "DoctorName")
 	private String DocName;
+	
+	@Column(name = "Reason")
+	private String reason;
+	
+	@Column(name = "Dte")
 	
 	public int getBookingID() {
 		return BookingID;
@@ -46,11 +62,11 @@ public class Consultation {
 	}
 
 	public String getReason() {
-		return Reason;
+		return reason;
 	}
 
 	public void setReason(String reason) {
-		Reason = reason;
+		this.reason = reason;
 	}
 
 	public String getTimestamp() {

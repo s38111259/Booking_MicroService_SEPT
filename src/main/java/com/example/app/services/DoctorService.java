@@ -1,4 +1,4 @@
-package com.example.app.resource;
+package com.example.app.services;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import com.example.app.repository.DoctorRepository;
 
 @RestController
 @RequestMapping(value = "/rest/doctors")
-public class DoctorResource {
+public class DoctorService {
 	
 	@Autowired
 	DoctorRepository doctorRepo;

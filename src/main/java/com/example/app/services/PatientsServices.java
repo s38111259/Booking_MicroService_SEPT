@@ -1,4 +1,4 @@
-package com.example.app.resource;
+package com.example.app.services;
 import com.example.app.model.*;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import com.example.app.repository.PatientRespository;
 
 @RestController
 @RequestMapping(value = "/rest/patients")
-public class PatientsResource {
+public class PatientsServices {
 	
 	@Autowired
 	PatientRespository patientRepo;
